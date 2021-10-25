@@ -12,8 +12,10 @@ connectDB();
 
 const { feedbackRoute } = require("./routes/feedbackRoute");
 const blogsRoute = require("./routes/blogsRoute");
+const projectsRoute = require("./routes/projectsRoute");
 
 app.post("/feedback", feedbackRoute);
 app.use("/blogs", blogsRoute);
+app.use("/projects", projectsRoute);
 
 app.listen(port, () => console.log(`server listening on port ${port}`));
